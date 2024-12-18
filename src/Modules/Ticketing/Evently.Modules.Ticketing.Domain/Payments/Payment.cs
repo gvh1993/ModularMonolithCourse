@@ -19,7 +19,7 @@ public sealed class Payment : Entity
 
     public string Currency { get; private set; }
 
-    public decimal? AmountRefunded { get; private set; }
+    public decimal? AmountRefunded { get; private set; } = decimal.Zero;
 
     public DateTime CreatedAtUtc { get; private set; }
 
@@ -44,7 +44,7 @@ public sealed class Payment : Entity
 
     public Result Refund(decimal refundAmount)
     {
-        if (AmountRefunded.HasValue && AmountRefunded == Amount)
+        if (AmountRefunded == Amount)
         {
             return Result.Failure(PaymentErrors.AlreadyRefunded);
         }

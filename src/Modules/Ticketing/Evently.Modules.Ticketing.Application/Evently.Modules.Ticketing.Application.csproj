@@ -3,6 +3,11 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\Evently.Common.Application\Evently.Common.Application.csproj" />
     <ProjectReference Include="..\Evently.Modules.Ticketing.Domain\Evently.Modules.Ticketing.Domain.csproj" />
+    <ProjectReference Include="..\Evently.Modules.Ticketing.IntegrationEvents\Evently.Modules.Ticketing.IntegrationEvents.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Customers\UpdateCustomer\" />
   </ItemGroup>
 
 </Project>

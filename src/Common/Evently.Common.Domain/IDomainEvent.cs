@@ -1,8 +1,6 @@
-﻿using MediatR;
+﻿namespace Evently.Common.Domain;
 
-namespace Evently.Common.Domain;
-
-public interface IDomainEvent : INotification
+public interface IDomainEvent
 {
     Guid Id { get; }
 

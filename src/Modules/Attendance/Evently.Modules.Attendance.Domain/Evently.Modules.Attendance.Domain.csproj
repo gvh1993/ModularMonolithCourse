@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Evently.Common.Domain\Evently.Common.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Evently.Modules.Attendance.UnitTests" />
+    <InternalsVisibleTo Include="Evently.UnitTests" />
+  </ItemGroup>
+  
+</Project>

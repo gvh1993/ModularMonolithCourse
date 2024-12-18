@@ -23,6 +23,20 @@ services:
     ports:
       - 5432:5432
 
+  evently.identity:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: Evently.Identity
+    command: start-dev --import-realm
+    environment:
+      - KC_HEALTH_ENABLED=true
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    volumes:
+      - ./.containers/identity:/opt/keycloak/data
+      - ./.files:/opt/keycloak/data/import
+    ports:
+      - 18080:8080
+
   evently.seq:
     image: datalust/seq:latest
     container_name: Evently.Seq
@@ -38,3 +52,11 @@ services:
     restart: always
     ports:
       - 6379:6379
+
+  evently.jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: Evently.Jaeger
+    ports:
+      - 4317:4317
+      - 4318:4318
+      - 16686:16686

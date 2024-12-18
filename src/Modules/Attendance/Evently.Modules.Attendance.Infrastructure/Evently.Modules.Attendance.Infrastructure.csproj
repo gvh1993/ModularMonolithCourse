@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Evently.Common.Infrastructure\Evently.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evently.Modules.Attendance.Application\Evently.Modules.Attendance.Application.csproj" />
+    <ProjectReference Include="..\Evently.Modules.Attendance.Presentation\Evently.Modules.Attendance.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>

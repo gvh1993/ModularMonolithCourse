@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.35" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
+    <PackageReference Include="Dapper" Version="2.1.44" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
     <PackageReference Include="Serilog" Version="3.1.1" />
@@ -10,4 +11,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Evently.Common.Domain\Evently.Common.Domain.csproj" />
   </ItemGroup>
+
 </Project>
